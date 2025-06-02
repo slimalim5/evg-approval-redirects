@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Processing Approval...</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const recordId = params.get("recordId");
+
+      fetch(`https://hooks.zapier.com/hooks/catch/22995523/2vit9by/?decision=Approved&recordId=${recordId}`)
+        .finally(() => {
+          window.location.href = "https://evg-confirmation.carrd.co";
+        });
+    </script>
+  </head>
+  <body>
+    <p>Submitting your decision...</p>
+  </body>
+</html>
